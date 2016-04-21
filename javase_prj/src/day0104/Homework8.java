@@ -9,7 +9,7 @@ public class Homework8 {
 	public Homework8() { // 생성자
 		hw = new Homework8();
 	}*/
-	/*test*//*어머*/
+	/*test*/
 	/**
 	 * flag(기준변수)를 사용하여 임시비밀번호를 생성한 후 반환하는 일
 	 * @return
