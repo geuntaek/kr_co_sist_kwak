@@ -6,16 +6,16 @@ public class Homework8 {
 	
 	/*private Homework8 hw;
 	
-	public Homework8() { // ìƒì„±ì
+	public Homework8() { // »ı¼ºÀÚ
 		hw = new Homework8();
 	}*/
-	/*test*//*ë§í•¨*/
+	/*test*//*¸ÁÇÔ*/
 	/**
-	 * flag(ê¸°ì¤€ë³€ìˆ˜)ë¥¼ ì‚¬ìš©í•˜ì—¬ ì„ì‹œë¹„ë°€ë²ˆí˜¸ë¥¼ ìƒì„±í•œ í›„ ë°˜í™˜í•˜ëŠ” ì¼
+	 * flag(±âÁØº¯¼ö)¸¦ »ç¿ëÇÏ¿© ÀÓ½Ãºñ¹Ğ¹øÈ£¸¦ »ı¼ºÇÑ ÈÄ ¹İÈ¯ÇÏ´Â ÀÏ
 	 * @return
 	 */
-	public char[] password() { // íŒ¨ìŠ¤ì›Œë“œ ìƒì„±
-		char[] passArr = new char[8]; // ë¹„ë°€ë²ˆí˜¸ 8ìë¦¬ ë°°ì—´
+	public char[] password() { // ÆĞ½º¿öµå »ı¼º
+		char[] passArr = new char[8]; // ºñ¹Ğ¹øÈ£ 8ÀÚ¸® ¹è¿­
 		int flag = 0;
 		for (int i = 0; i < passArr.length; i++) {
 			flag = (int) (Math.random() * 123); // 0~122
@@ -26,9 +26,9 @@ public class Homework8 {
 			}
 			
 			/*cnt = (int) (Math.random() * 3);
-			if (cnt == 0) { // ëŒ€ë¬¸ì
+			if (cnt == 0) { // ´ë¹®ÀÚ
 				passArr[i] = (char) ((Math.random() * 26) + 65);
-			} else if (cnt == 1) { // ì†Œë¬¸ì
+			} else if (cnt == 1) { // ¼Ò¹®ÀÚ
 				passArr[i] = (char) ((Math.random() * 26) + 97);
 			} else { // 0~9
 				passArr[i] = (char) ((Math.random() * 10) + 48);
@@ -38,13 +38,13 @@ public class Homework8 {
 		return passArr;
 	}// password
 
-	public int[] lotto() { // ë¡œë˜ ìƒì„±
-		int[] lottoArr = new int[6]; // ë¡œë˜ 6ìë¦¬ ë°°ì—´
+	public int[] lotto() { // ·Î¶Ç »ı¼º
+		int[] lottoArr = new int[6]; // ·Î¶Ç 6ÀÚ¸® ¹è¿­
 		for (int i = 0; i < lottoArr.length; i++) {
 			lottoArr[i] = (int) ((Math.random() * 45) + 1); // 1~45
 			
 			for (int j = 0; j < i; j++) {
-				if (lottoArr[i] == lottoArr[j]) { // ì¤‘ë³µì²´í¬
+				if (lottoArr[i] == lottoArr[j]) { // Áßº¹Ã¼Å©
 					i--;
 					break;
 				}
@@ -54,11 +54,11 @@ public class Homework8 {
 		return lottoArr;
 	}// lotto
 	
-	private void viewPass1(){ // ì´ í´ë˜ìŠ¤ ì•ˆì—ì„œë§Œ ì‚¬ìš©í• ê±°ê¸°ë•Œë¬¸ì— private
+	private void viewPass1(){ // ÀÌ Å¬·¡½º ¾È¿¡¼­¸¸ »ç¿ëÇÒ°Å±â¶§¹®¿¡ private
 		Homework8 hw = new Homework8();
 		char[] pass = hw.password();
 		
-		out.printf("ë¹„ë°€ë²ˆí˜¸ : ");
+		out.printf("ºñ¹Ğ¹øÈ£ : ");
 		for (int i = 0; i < pass.length; i++) {
 			out.print(pass[i]);
 		}
@@ -69,11 +69,11 @@ public class Homework8 {
 		 */
 	}// viewPass
 	
-	private void viewPass2(){ // ì´ í´ë˜ìŠ¤ ì•ˆì—ì„œë§Œ ì‚¬ìš©í• ê±°ê¸°ë•Œë¬¸ì— private
+	private void viewPass2(){ // ÀÌ Å¬·¡½º ¾È¿¡¼­¸¸ »ç¿ëÇÒ°Å±â¶§¹®¿¡ private
 		Homework8 hw = new Homework8();
 		int[] lotto = hw.lotto();
 		
-		out.printf("\në¡œë˜ë²ˆí˜¸ : ");
+		out.printf("\n·Î¶Ç¹øÈ£ : ");
 		for (int i = 0; i < lotto.length; i++) {
 			out.printf("%d\t",lotto[i]);
 		}// end for
